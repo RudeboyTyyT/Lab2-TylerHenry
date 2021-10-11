@@ -1,0 +1,62 @@
+﻿
+<Window x:Class="Lab2_TylerHenry.summaryWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab1_TylerHenry"
+        mc:Ignorable="d"
+        Title="summaryWindow" Height="300" Width="450"
+        ResizeMode="NoResize">
+    <Grid>
+        <Grid>
+
+            <Grid.ColumnDefinitions>
+                
+                <ColumnDefinition />
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <!-- Row 0 Controls -->
+            <Label Content="Total Workers:" HorizontalAlignment="Left" 
+                Margin="39,0,0,0" VerticalAlignment="Center" Height="26" Width="86" Grid.Column="0"/>
+            <TextBox x:Name="textBoxTotalWorkers" Grid.Column="1" HorizontalAlignment="Left" Margin="2,0,0,0" 
+                TextWrapping="Wrap" VerticalAlignment="Center" 
+                Width="200" Height="18" IsReadOnly="True"/>
+
+            <Label Content="Total Messages:" HorizontalAlignment="Left" 
+                   Margin="39,0,0,0" VerticalAlignment="Center" Height="26" Width="86" Grid.Column="0" Grid.Row ="1"/>
+            <TextBox x:Name="textBoxTotalMessages" Grid.Column="1" Grid.Row ="1" HorizontalAlignment="Left" Margin="2,0,0,0" 
+                     TextWrapping="Wrap" VerticalAlignment="Center" 
+                     Width="200" Height="18" IsReadOnly="True"/>
+
+            <!-- Row 1 Controls -->
+            <Label Content="Total Pay:" HorizontalAlignment="Left" 
+                Margin="39,0,0,0" Grid.Row="2" VerticalAlignment="Center" Height="26" Width="86" Grid.Column="0"/>
+            <TextBox x:Name="textBoxTotalPay" Grid.Column="1" HorizontalAlignment="Left" Margin="2,0,0,0" 
+                Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Center" 
+                Width="200" Height="18" IsReadOnly="True"/>
+
+            <!-- Row 2 Controls -->
+            <Label Content="Average Pay:" HorizontalAlignment="Left" 
+                Margin="39,0,0,0" Grid.Row="3" VerticalAlignment="Center" Height="26" Width="86" Grid.Column="0"/>
+            <TextBox x:Name="textBoxAveragePay" Grid.Column="1" HorizontalAlignment="Left" Margin="2,0,0,0" 
+                Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Center" 
+                Width="200" Height="18" IsReadOnly="True"/>
+
+
+
+            <Button x:Name="buttonCloseSummary" Content="Close Summary" Grid.Column="1"  Margin="5" Grid.Row="4" Click="buttonCloseSummary_Click" />
+            <Button x:Name="buttonResetSummary" Content="Reset Summary"  Margin="5" Grid.Row="4" Click="buttonResetSummary_Click" />
+        </Grid>
+
+    </Grid>
+</Window>
